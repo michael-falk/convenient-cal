@@ -30,8 +30,14 @@ Calendar = React.createClass({
                     {this.renderMonthLabel()}
                     <i className="fa fa-angle-right" onClick={this.next}></i>
                 </div>
-                <DayNames />
-                {this.renderWeeks()}
+                <table>
+                    <thead>
+                        <DayNames />
+                    </thead>
+                    <tbody>
+                        {this.renderWeeks()}
+                    </tbody>
+                </table>
             </div>
         );
     },
@@ -44,7 +50,7 @@ Calendar = React.createClass({
             count = 0;
 
         while (!done) {
-            weeks.push(<Week key={date.toString()} date={date.clone()} current_month={this.state.month} select=    {this.select} selected={this.props.selected} />);
+            weeks.push(<Week key={date.toString()} date={date.clone()} month={this.state.month} select={this.select} selected={this.props.selected} />);
             date.add(1, "w");
             done = count++ > 2 && monthIndex !== date.month();
             monthIndex = date.month();

@@ -1,4 +1,15 @@
 /*CSS declarations go here*/
+
+html, body, #render-target, .container
+{
+  height: 100%;
+}
+
+#calendar
+{
+    height: 85%;
+}
+
 body {
   font-family: sans-serif;
   background-color: #315481;
@@ -18,7 +29,7 @@ body {
 }
 
 .container {
-  max-width: 600px;
+  /*max-width: 600px;*/
   margin: 0 auto;
   min-height: 100%;
   background: white;
@@ -41,6 +52,7 @@ h1 {
 
 table {
     width: 98%;
+    height: 98%;
 }
 
 @media (max-width: 600px) {
@@ -64,7 +76,8 @@ table {
 }
 
 th.day {
-    width : 14%;
+    width: 14%;
+    height: 14%; 
 }
 
 .month-week-view {

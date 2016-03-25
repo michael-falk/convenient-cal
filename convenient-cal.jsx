@@ -3,7 +3,8 @@ if (Meteor.isClient) {
     
     Meteor.startup(function () {
         // Use Meteor.startup to render the component after the page is ready
-        ReactDOM.render(<App />, document.getElementById("render-target"));
+        var dates=[1,2,3,4,5,6];
+        ReactDOM.render(<AllDayEventContainer dates={dates} />, document.getElementById("render-target"));
     });
 }
 
